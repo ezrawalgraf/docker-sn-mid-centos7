@@ -4,7 +4,7 @@ LABEL maintainer="ezra walgraf"
 
 ADD asset/* /opt/
 
-RUN yum update && yum install -qy unzip \
+RUN yum update -qy && yum install -qy unzip \
     supervisor \
     xmlstarlet \
     vim \
