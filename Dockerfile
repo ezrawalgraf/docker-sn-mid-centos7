@@ -9,6 +9,7 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 RUN yum update -y && yum install -y unzip \
     supervisor \
     vim \
+    sysvinit-tools \
     xmlstarlet \
     wget && \
     yum clean packages -y && \
