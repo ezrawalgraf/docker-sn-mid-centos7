@@ -9,7 +9,7 @@ RUN yum update -qy && yum install -qy unzip \
     xmlstarlet \
     vim \
     wget && \
-    yum clean && \
+    yum clean packages -qy && \
     rm -rf /tmp/*
 
 RUN wget --no-check-certificate \
