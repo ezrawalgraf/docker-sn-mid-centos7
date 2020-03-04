@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-xmlstarlet edit \
+/bin/xmlstarlet edit \
     --inplace \
     --update "/parameters/parameter[@name='$2']/@value" \
     --value "$3" \
