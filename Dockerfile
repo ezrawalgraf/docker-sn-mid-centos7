@@ -4,17 +4,14 @@ LABEL maintainer="ezra walgraf"
 
 ADD asset/* /opt/
 
-RUN yum update -qy && yum install -qy unzip \
-    supervisor \
-    vim \
-    wget && \
-    yum clean packages -qy && \
-    rm -rf /tmp/*
-
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
-RUN sudo yum install -qy xmlstarlet && \
-    yum clean packages -qy && \
+RUN yum update -y && yum install -y unzip \
+    supervisor \
+    vim \
+    xmlstarlet \
+    wget && \
+    yum clean packages -y && \
     rm -rf /tmp/*
 
 RUN wget --no-check-certificate \
